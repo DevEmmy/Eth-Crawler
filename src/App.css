@@ -1,0 +1,87 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Nav Compo */
+.nav_compo{
+  width: 100%;
+  padding: 20px;
+  /* color: rgb(10,60,200); */
+  box-shadow:0 26px 80px rgba(0,0,0,1);
+}
+
+/* Banner Compo */
+.banner_compo{
+  width: 100%;
+  padding: 30px;
+  background-color: rgb(20, 60, 205);
+  color: white;
+}
+
+.starter{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Form Compo */
+.form_compo{
+  width: 80%;
+  margin: 30px auto;
+}
+
+.form_compo > form{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.form_compo > form > input{
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.form_compo > form > button{
+  width: 100%;
+  padding:12px 20px;
+  background-color: rgb(20, 60, 205);
+  color: white;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Transaction Compo */
+.transaction_compo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.dark_bg{
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+}
+
+.transaction_container{
+  position: absolute;
+  top: 10vh;
+  width: 80%;
+  background-color: white;
+  margin: 20px auto;
+  height: 80vh;
+  border-radius: 20px;
+  border: 2px solid gray;
+  box-shadow: 0 16px 30px rgba(0,0,0,0.3);
+  left: 10%;
+  padding: 30px;
+}
