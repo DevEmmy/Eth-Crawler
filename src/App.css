@@ -16,7 +16,7 @@
 .banner_compo{
   width: 100%;
   padding: 30px;
-  background-color: rgb(20, 60, 205);
+  background-color: rgb(20, 180, 230);
   color: white;
 }
 
@@ -49,7 +49,7 @@
 .form_compo > form > button{
   width: 100%;
   padding:12px 20px;
-  background-color: rgb(20, 60, 205);
+  background-color: rgb(20, 180, 230);
   color: white;
   border: none;
   color: white;
@@ -75,30 +75,111 @@
 .transaction_container{
   position: absolute;
   top: 10vh;
-  width: 80%;
+  width: 90%;
   background-color: white;
   margin: 20px auto;
-  height: 80vh;
+  height: 70vh;
   border-radius: 20px;
   border: 2px solid gray;
   box-shadow: 0 16px 30px rgba(0,0,0,0.3);
-  left: 10%;
+  left: 5%;
   padding: 30px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  transition: .5s;
 }
 
 .cancel_dialogue{
   position: absolute;
   top: 5vh;
-  right: 10%;
+  right: 6%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   color: black;
   justify-items: center;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   padding:7px;
   border-radius: 50%;
   cursor: pointer;
 }
+
+.details{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.detail{
+  width: 100%;
+  padding: 17px;
+  background-color: rgba(100, 180, 230, 0.2);
+  color: rgba(100, 180, 230, 1);
+  border-radius: 12px;
+
+}
+
+/* Loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  top: 40vh;
+  left: 48%;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent rgb(20, 180, 230) rgb(20, 180, 230);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+    

@@ -3,8 +3,9 @@ import TransactionDetails from './TransactionDetails'
 
 function Form() {
     const [ checkTransaction, setCheckTransaction ] = useState(false)
-    const [walletDetails, setWalletDetails ] = useState([])
-    const [ walletTransactions, setWalletTransactions ] = useState([])
+    const [walletDetails, setWalletDetails ] = useState(null)
+    const [ walletTransactions, setWalletTransactions ] = useState(null)
+    const [loader, setLoader] = useState(false)
 
     const walletRef = useRef(null);
     const blockRef = useRef(null);
@@ -48,7 +49,7 @@ function Form() {
             <button onClick={()=> {setCheckTransactionStatus(); fetchTransactionDetails()}}> Check </button>
         </form>
 
-        { checkTransaction ?  <TransactionDetails closeFunc = {setCheckTransactionStatus} transactions={walletTransactions} walletAddress = { walletRef.current.value }/> : ""}
+        { checkTransaction ?  <TransactionDetails closeFunc = {setCheckTransactionStatus} transactions={walletTransactions} walletAddress = { walletRef.current.value } loader = {loader}/> : ""}
     </div>
   )
 }
