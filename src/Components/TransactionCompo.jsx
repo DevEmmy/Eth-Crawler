@@ -6,14 +6,14 @@ function TransactionCompo({transactions, walletAddress, details}) {
 
 <div className="transaction_content">
  <div className="transactions_details">
-   <h3>Transactions Details { transactions }</h3>
-   <div className="details">
+   <h3>Transactions Details </h3>
+   <div className="details" >
      
      {
-       transactions.length === 0 ? transactions?.map((transaction)=>{
+       transactions && transactions?.map((transaction)=>{
          return(
            <div className="detail">
-             <p className="status">Status: { transaction.from === walletAddress ? "Sent" : "Received"}</p>
+             <p className="status" style={transaction.from === walletAddress ? {color:"red"} : {color:"green"} }>Status: { transaction.from === walletAddress ? "Sent" : "Received"}</p>
              <p className="other_wallet">
              { transaction.from === walletAddress ? `to : ${transaction.to || walletAddress}` : `from : ${transaction.from}`}
              </p>
@@ -28,14 +28,14 @@ function TransactionCompo({transactions, walletAddress, details}) {
            </div>
          )
        })
-       : <h1>nnn</h1>
+
      }
 
      {
        details && details.map((detail)=>{
          return(
            <>
-              <div className="detail">
+              <div className="detail small_view">
                 <p>Wallet Address : { walletAddress }</p>
                 <p> Balance : { detail.result/ 1000000000000000000} ETH</p>
               </div>

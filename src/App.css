@@ -183,6 +183,9 @@
   }
 }
     
+.small_view{
+  height: auto;
+}
 
 .opp_container{
   width: 90%;
