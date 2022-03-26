@@ -9,6 +9,7 @@ function TransactionCompo({transactions, walletAddress, details}) {
    <h3>Transactions Details </h3>
    <div className="details" >
      
+     {/* if the transactions state is non empty (meanwhile the details state is), display the dialogue with the transactions details */}
      {
        transactions && transactions?.map((transaction)=>{
          return(
@@ -30,6 +31,8 @@ function TransactionCompo({transactions, walletAddress, details}) {
        })
 
      }
+
+     {/* if the details state is non empty (meanwhile the transactions state is), display the dialogue with the transactions details */}
 
      {
        details && details.map((detail)=>{
