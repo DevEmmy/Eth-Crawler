@@ -1,9 +1,11 @@
 # Eth Crawler
-This is a project that helps users fetch their transactions and wallet details associated with their wallet address 
+This is a project that helps users fetch their transactions and wallet details associated with their Etheruem wallet address. This project was built with React as it client-side and consumed an api from [EtherScan](https://ethercan.io)
 
-## Available Scripts
+## Run the Project
 
-In the project directory, you can run:
+Before you run the project, you need to generate an api key from [EtherScan](https://ethercan.io), then create a file called `.env` file and declare a variable called "API_KEY".
+
+In the project directory, you can then run:
 
 ### `npm start`
 
@@ -14,5 +16,13 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
+## View Demo
+You can view the demo here - [https://eth-crawler.netlify.app](https://eth-crawler.netlify.app) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Previews
+
+![Preview 1](./Previews/preview-1.png)
+![Preview 2](./Previews/preview-2.png)
+![Preview 3](./Previews/preview-3.png)
+![Preview 4](./Previews/preview-4.png)
